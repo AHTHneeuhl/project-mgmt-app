@@ -10,12 +10,10 @@ const Clients = () => {
   if (loading) return <Spinner />;
   if (error) return <p>something went wrong</p>;
 
-  console.log(data);
-
   return (
     <div>
       {data.clients.map(({ id, name, email, phone }) => (
-        <User key={id} name={name} email={email} phone={phone} />
+        <User key={id} clientId={id} name={name} email={email} phone={phone} />
       ))}
     </div>
   );
