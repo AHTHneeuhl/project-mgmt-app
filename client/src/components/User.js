@@ -20,14 +20,16 @@ const User = ({ clientId, name, email, phone }) => {
   });
 
   return (
-    <div className="card" style={{ width: "18rem" }}>
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
-        <p className="card-text">{email}</p>
-        <p className="card-text">{phone}</p>
-        <button className="btn btn-danger btn-sm" onClick={deleteClient}>
-          <FaTrash />
-        </button>
+    <div className="col-md-4">
+      <div className="card mb-3">
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">{email}</p>
+          <p className="card-text">{phone}</p>
+          <button className="btn btn-danger btn-sm" onClick={deleteClient}>
+            <FaTrash />
+          </button>
+        </div>
       </div>
     </div>
   );

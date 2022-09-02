@@ -8,10 +8,10 @@ const Clients = () => {
   const { data, loading, error } = useQuery(GET_CLIENTS);
 
   if (loading) return <Spinner />;
-  if (error) return <p>something went wrong</p>;
+  if (error) return <p>Something went wrong!</p>;
 
   return (
-    <div>
+    <div className="row mt-4">
       {data.clients.map(({ id, name, email, phone }) => (
         <User key={id} clientId={id} name={name} email={email} phone={phone} />
       ))}
